@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {fetchStringsTC} from "./bll/strings-reducer";
 import {RootStateType} from "./bll/store";
 import {lengthFilter} from "./utils/filters/length-filter";
+import {substringFilter} from "./utils/filters/substring-filter";
 
 function App() {
 
@@ -21,30 +22,9 @@ function App() {
         dispatch(fetchStringsTC())
     }, [dispatch])
 
-    let array: string[] = []
-
     const onSubstringClickHandler = () => {
-        if (value) {
-            if (register) {
-                if (typeof value === "string") {
-                    for (let i = 0; i < strings.length; i++) {
-                        if (strings[i].includes(value)) {
-                            array.push(strings[i])
-                        }
-                    }
-                    setFilteredArray(array)
-                }
-            } else {
-                if (typeof value === "string") {
-                    for (let i = 0; i < strings.length; i++) {
-                        if (strings[i].toLocaleLowerCase().includes(value.toLocaleLowerCase())) {
-                            array.push(strings[i])
-                        }
-                    }
-                    setFilteredArray(array)
-                }
-            }
-        }
+        let array = substringFilter(value, register, strings)
+        setFilteredArray(array)
     }
     const onLengthFilterClickHandler = () => {
         let array = lengthFilter(value, strings)

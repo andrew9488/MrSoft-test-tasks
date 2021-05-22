@@ -13,14 +13,12 @@ export const fetchStringsTC = createAsyncThunk("strings/fetchStrings", async (pa
 export const stringsSlice = createSlice({
     name: "strings",
     initialState: {
-        data: {
-            data: [] as string[]
-        }
+        data: [] as string[]
     },
     reducers: {},
     extraReducers: builder => {
-        builder.addCase(fetchStringsTC.fulfilled,(state, action)=>{
-            state.data = {...state.data, ...action.payload.data}
+        builder.addCase(fetchStringsTC.fulfilled, (state, action) => {
+            state.data = action.payload.data
         })
     }
 

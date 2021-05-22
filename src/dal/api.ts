@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL: `http://www.mrsoft.by/data.json`
+    baseURL: `https://cors-anywhere.herokuapp.com/http://www.mrsoft.by`, // use it for CORS
 })
 
 type ResponseType = {
