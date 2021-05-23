@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import s from "./App.module.scss";
 import {useDispatch, useSelector} from "react-redux";
-import {fetchStringsTC} from "../bll/strings-reducer";
+import {fetchStringsTC, StatusType} from "../bll/strings-reducer";
 import {FilterSettings} from "../features/filterSettings/FilterSettings";
 import {RootStateType} from "../bll/store";
 import {Header} from "../features/header/Header";
@@ -115,6 +115,7 @@ export const App: React.FC = () => {
     //     "scottish deerhound",]
     const strings = useSelector<RootStateType, string[]>(state => state.strings.data)
     const isInitialized = useSelector<RootStateType, boolean>(state => state.strings.isInitialized)
+    const status = useSelector<RootStateType, StatusType>(state => state.strings.status)
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -127,6 +128,7 @@ export const App: React.FC = () => {
 
     return (
         <div className={s.App}>
+            {status === "loading" && <Preloader/>}
             <Header/>
             <FilterSettings strings={strings}/>
             <Footer/>
