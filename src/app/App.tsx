@@ -1,66 +1,129 @@
-import React, {ChangeEvent, useEffect, useState} from 'react';
-import './App.css';
+import React, {useEffect} from "react";
+import s from "./App.module.scss";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchStringsTC} from "../bll/strings-reducer";
+import {FilterSettings} from "../features/filterSettings/FilterSettings";
 import {RootStateType} from "../bll/store";
-import {lengthFilter} from "../utils/filters/length-filter";
-import {substringFilter} from "../utils/filters/substring-filter";
-import {Checkbox} from "../features/common/Checkbox/Checkbox";
-import {Input} from "../features/common/Input/Input";
+import {Header} from "../features/header/Header";
+import {Footer} from "../features/footer/Footer";
 
 export const App: React.FC = () => {
 
-    const [value, setValue] = useState<string | number>('')
-    const [register, setRegister] = useState<boolean>(false)
-    const [filteredArray, setFilteredArray] = useState<string[]>([])
     // const strings = useSelector<RootStateType, string[]>(state => state.strings.data)
-    const strings = ["affenpinscher", "whippet", "african", "irish wolfhound", "pembroke", "airedale", "NEWFOUNDLAND", "OTTERHOUND",
-        "PAPILLON", "PEKINESE", "SWISS MOUNTAIN", "weimaraner", "MINIATURE PINSCHER", "akita", "GERMAN POINTER", "vizsla",
-        "POMERANIAN", "appenzeller", "MINIATURE POODLE", "yorkshire terrier", "STANDARD POODLE", "basenji", "BERNESE MOUNTAIN",
-        "wheaten terrier", "TOY POODLE", "beagle", "MEXICANHAIRLESS",]
+    const strings = [
+        "affenpinscher",
+        "whippet",
+        "african",
+        "irish wolfhound",
+        "pembroke",
+        "airedale",
+        "NEWFOUNDLAND",
+        "OTTERHOUND",
+        "PAPILLON",
+        "PEKINESE",
+        "SWISS MOUNTAIN",
+        "weimaraner",
+        "MINIATURE PINSCHER",
+        "akita",
+        "GERMAN POINTER",
+        "vizsla",
+        "POMERANIAN",
+        "appenzeller",
+        "MINIATURE POODLE",
+        "yorkshire terrier",
+        "STANDARD POODLE",
+        "basenji",
+        "BERNESE MOUNTAIN",
+        "wheaten terrier",
+        "TOY POODLE",
+        "beagle",
+        "MEXICANHAIRLESS",
+        "westhighland terrier",
+        "PUG",
+        "bluetick",
+        "TIBETAN MASTIFF",
+        "toy terrier",
+        "PYRENEES",
+        "borzoi",
+        "BULL MASTIFF",
+        "tibetan terrier",
+        "REDBONE",
+        "bouvier",
+        "MALTESE",
+        "silky terrier",
+        "CHESAPEAKE RETRIEVER",
+        "boxer",
+        "MALINOIS",
+        "sealyham terrier",
+        "CURLY RETRIEVER",
+        "brabancon",
+        "MALAMUTE",
+        "scottish terrier",
+        "FLATCOATED RETRIEVER",
+        "briard",
+        "LHASA",
+        "patterdale terrier",
+        "GOLDEN RETRIEVER",
+        "boston bulldog",
+        "LEONBERG",
+        "norwich terrier",
+        "RHODESIAN RIDGEBACK",
+        "french bulldog",
+        "LABRADOR",
+        "norfolk terrier",
+        "ROTTWEILER",
+        "staffordshire bullterrier",
+        "KUVASZ",
+        "lakeland terrier",
+        "SALUKI",
+        "cairn",
+        "KOMONDOR",
+        "kerryblue terrier",
+        "SAMOYED",
+        "chihuahua",
+        "KELPIE",
+        "irish terrier",
+        "SCHIPPERKE",
+        "chow",
+        "KEESHOND",
+        "fox terrier",
+        "GIANT SCHNAUZER",
+        "clumber",
+        "HUSKY",
+        "dandie terrier",
+        "MINIATURE SCHNAUZER",
+        "border collie",
+        "WALKER HOUND",
+        "border terrier",
+        "ENGLISH SETTER",
+        "coonhound",
+        "ENGLISH HOUND",
+        "bedlington terrier",
+        "GORDON SETTER",
+        "cardigan corgi",
+        "BLOOD HOUND",
+        "australian terrier",
+        "IRISH SETTER",
+        "dachshund",
+        "BASSET HOUND",
+        "american terrier",
+        "ENGLISH SHEEPDOG",
+        "great dane",
+        "AFGHAN HOUND",
+        "stbernard",
+        "SHETLAND SHEEPDOG",
+        "scottish deerhound",]
     const dispatch = useDispatch()
-
-    const error = value ? "" : "error";
 
     useEffect(() => {
         dispatch(fetchStringsTC())
     }, [dispatch])
 
-    const onSubstringClickHandler = () => {
-        let array = substringFilter(value, register, strings)
-        setFilteredArray(array)
-    }
-    const onLengthFilterClickHandler = () => {
-        let array = lengthFilter(value, strings)
-        setFilteredArray(array)
-    }
-
-    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setValue(e.currentTarget.value)
-    }
-
-    const onChangeCheckHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setRegister(e.currentTarget.checked)
-    }
-
     return (
-        <div className="App">
-            <div>
-                <Input value={value}
-                        onChange={onChangeHandler}
-                        error={error}/>
-            </div>
-            <Checkbox checked={register} onChange={onChangeCheckHandler}/>
-            <div>
-                <button onClick={(e) => onLengthFilterClickHandler()}>по количеству</button>
-                <button onClick={(e) => onSubstringClickHandler()}>по подстроке</button>
-            </div>
-            <div>
-
-            </div>
-            <>{filteredArray && filteredArray.map((s, i) => {
-                return <div key={i}>{s}</div>
-            })}</>
+        <div className={s.App}>
+            <Header/>
+            <FilterSettings strings={strings}/>
+            <Footer/>
         </div>
     );
 }

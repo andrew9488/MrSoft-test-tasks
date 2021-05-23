@@ -1,0 +1,19 @@
+@import "src/features/common/styles/sass/mixins";
+@import "src/features/common/styles/sass/variables";
+
+input::-webkit-input-placeholder {
+  color: $primaryBackGround;
+  background-color: $backGround;
+}
+
+.inputCorrect {
+  @include input($borderColor)
+}
+
+.inputError {
+  @include input($colorError);
+}
+
+.error {
+  color: $colorError;
+}

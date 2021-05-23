@@ -1,0 +1,29 @@
+@import "src/features/common/styles/sass/variables";
+
+.checkbox {
+  transform: scale(1.5);
+  cursor: pointer;
+  font-size: 8px;
+  visibility: hidden;
+
+  &:after {
+    content: " ";
+    background-color: $backGround;
+    display: inline-block;
+    padding-bottom: 5px;
+    color: $borderColor;
+    width: 10px;
+    height: 7px;
+    visibility: visible;
+    border: 1px solid $borderColor;
+    padding-left: 3px;
+    border-radius: 4px;
+  }
+
+  &:checked {
+    &:after {
+      content: "\2714";
+      font-weight: bolder;
+    }
+  }
+}

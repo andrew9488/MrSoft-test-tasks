@@ -1,0 +1,12 @@
+@import "src/features/common/styles/sass/variables.scss";
+
+.button {
+    background-color: $primaryBackGround;
+    padding: 5px;
+    border: 0;
+    border-radius: 7px;
+    height: 40px;
+    width: 80px;
+    box-shadow: 0 0 4px 2px $borderColor;
+    font-family: "Calibri", sans-serif;
+}

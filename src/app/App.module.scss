@@ -1,0 +1,10 @@
+@import "src/features/common/styles/sass/variables";
+
+.App {
+  text-align: center;
+  background-color: $backGround;
+  margin: 0 auto;
+  width: 400px;
+  height: 100vh;
+}
+
