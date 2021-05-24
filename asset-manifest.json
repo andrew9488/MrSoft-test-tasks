@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/MrSoft-test-tasks/static/css/main.548bc026.chunk.css",
-    "main.js": "/MrSoft-test-tasks/static/js/main.4c060dd1.chunk.js",
-    "main.js.map": "/MrSoft-test-tasks/static/js/main.4c060dd1.chunk.js.map",
+    "main.js": "/MrSoft-test-tasks/static/js/main.0ad2978d.chunk.js",
+    "main.js.map": "/MrSoft-test-tasks/static/js/main.0ad2978d.chunk.js.map",
     "runtime-main.js": "/MrSoft-test-tasks/static/js/runtime-main.bb26d32d.js",
     "runtime-main.js.map": "/MrSoft-test-tasks/static/js/runtime-main.bb26d32d.js.map",
     "static/js/2.e1d7c263.chunk.js": "/MrSoft-test-tasks/static/js/2.e1d7c263.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.bb26d32d.js",
     "static/js/2.e1d7c263.chunk.js",
     "static/css/main.548bc026.chunk.css",
-    "static/js/main.4c060dd1.chunk.js"
+    "static/js/main.0ad2978d.chunk.js"
   ]
 }
