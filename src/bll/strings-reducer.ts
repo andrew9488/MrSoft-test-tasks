@@ -6,7 +6,7 @@ export type StatusType = "idle" | "loading" | "succeeded" | "failed"
 export type InitialStateType = typeof initialState
 
 const initialState = {
-    status: "idle" as StatusType,
+    status: "loading" as StatusType,
     data: [] as string[]
 }
 
