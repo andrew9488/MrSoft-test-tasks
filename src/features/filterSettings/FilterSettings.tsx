@@ -63,7 +63,7 @@ export const FilterSettings: React.FC<FilterPropsType> = ({strings}) => {
                 <Button onClick={onLengthFilterClickHandler}>length</Button>
                 <Button onClick={onSubstringClickHandler}>substring</Button>
             </div>
-            <h2>Filtering strings:</h2>
+            <h2>Filtered strings:</h2>
             <Strings strings={filteredArray}/>
         </div>
     );
