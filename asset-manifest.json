@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/MrSoft-test-tasks/static/css/main.548bc026.chunk.css",
-    "main.js": "/MrSoft-test-tasks/static/js/main.0ad2978d.chunk.js",
-    "main.js.map": "/MrSoft-test-tasks/static/js/main.0ad2978d.chunk.js.map",
-    "runtime-main.js": "/MrSoft-test-tasks/static/js/runtime-main.bb26d32d.js",
-    "runtime-main.js.map": "/MrSoft-test-tasks/static/js/runtime-main.bb26d32d.js.map",
-    "static/js/2.e1d7c263.chunk.js": "/MrSoft-test-tasks/static/js/2.e1d7c263.chunk.js",
-    "static/js/2.e1d7c263.chunk.js.map": "/MrSoft-test-tasks/static/js/2.e1d7c263.chunk.js.map",
-    "static/js/3.2d4f6bd1.chunk.js": "/MrSoft-test-tasks/static/js/3.2d4f6bd1.chunk.js",
-    "static/js/3.2d4f6bd1.chunk.js.map": "/MrSoft-test-tasks/static/js/3.2d4f6bd1.chunk.js.map",
-    "index.html": "/MrSoft-test-tasks/index.html",
-    "static/css/main.548bc026.chunk.css.map": "/MrSoft-test-tasks/static/css/main.548bc026.chunk.css.map",
-    "static/js/2.e1d7c263.chunk.js.LICENSE.txt": "/MrSoft-test-tasks/static/js/2.e1d7c263.chunk.js.LICENSE.txt",
-    "static/media/Rolling-1s-231px.5238d0e6.svg": "/MrSoft-test-tasks/static/media/Rolling-1s-231px.5238d0e6.svg"
+    "main.css": "/words-filter/static/css/main.2589c686.chunk.css",
+    "main.js": "/words-filter/static/js/main.e77b0e2e.chunk.js",
+    "main.js.map": "/words-filter/static/js/main.e77b0e2e.chunk.js.map",
+    "runtime-main.js": "/words-filter/static/js/runtime-main.99948633.js",
+    "runtime-main.js.map": "/words-filter/static/js/runtime-main.99948633.js.map",
+    "static/js/2.e1d7c263.chunk.js": "/words-filter/static/js/2.e1d7c263.chunk.js",
+    "static/js/2.e1d7c263.chunk.js.map": "/words-filter/static/js/2.e1d7c263.chunk.js.map",
+    "static/js/3.2d4f6bd1.chunk.js": "/words-filter/static/js/3.2d4f6bd1.chunk.js",
+    "static/js/3.2d4f6bd1.chunk.js.map": "/words-filter/static/js/3.2d4f6bd1.chunk.js.map",
+    "index.html": "/words-filter/index.html",
+    "static/css/main.2589c686.chunk.css.map": "/words-filter/static/css/main.2589c686.chunk.css.map",
+    "static/js/2.e1d7c263.chunk.js.LICENSE.txt": "/words-filter/static/js/2.e1d7c263.chunk.js.LICENSE.txt",
+    "static/media/Rolling-1s-231px.5238d0e6.svg": "/words-filter/static/media/Rolling-1s-231px.5238d0e6.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.bb26d32d.js",
+    "static/js/runtime-main.99948633.js",
     "static/js/2.e1d7c263.chunk.js",
-    "static/css/main.548bc026.chunk.css",
-    "static/js/main.0ad2978d.chunk.js"
+    "static/css/main.2589c686.chunk.css",
+    "static/js/main.e77b0e2e.chunk.js"
   ]
 }
